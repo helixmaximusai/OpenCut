@@ -31,8 +31,10 @@ class HeuristicTests(unittest.TestCase):
         self.assertGreaterEqual(len(windows), 1)
         best = max(windows, key=lambda window: window.score)
         self.assertEqual(best.source, "srt-density")
-        self.assertGreaterEqual(best.start, 6.0)
-        self.assertLessEqual(best.end, 18.0)
+        # Dense cues are 8s–13s; MIN_CLIP_SECONDS expands the window around them.
+        self.assertLessEqual(best.start, 8.0)
+        self.assertGreaterEqual(best.end, 13.0)
+        self.assertGreater(best.score, 0)
 
     def test_duration_split_without_cues(self) -> None:
         windows = propose_windows([], video_duration=90.0, max_clips=3)
