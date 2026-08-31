@@ -1,6 +1,6 @@
 # OpenCut (Legacy)
 
-> **Helix working-and-tested:** this tree is vendored on the Helix fork branch `helix/working-and-tested` from [OpenCut-app/opencut-classic](https://github.com/OpenCut-app/opencut-classic). It is based on OpenCut, not a CapCut clone-in-name. See the repo-root README for the command that exits 0 and what still fails.
+> **HelixBuilds editing (code host only):** vendored on `helixmaximusai/OpenCut` branch `helix/working-and-tested` from [OpenCut-app/opencut-classic](https://github.com/OpenCut-app/opencut-classic). OpenCut is HelixBuilds’ editing tool (faceless YouTube pipeline), absorbed here — not a parallel product, not a new desk/vault/editor stack, and not a second CapCut business. See the repo-root README.
 
 This is the original OpenCut codebase. It's archived and no longer maintained.
 
