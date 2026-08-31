@@ -1,6 +1,6 @@
 # OpenCut (Legacy)
 
-> **HelixBuilds editing (code host only):** vendored on `helixmaximusai/OpenCut` branch `helix/working-and-tested` from [OpenCut-app/opencut-classic](https://github.com/OpenCut-app/opencut-classic). OpenCut is HelixBuilds’ editing tool (faceless YouTube pipeline), absorbed here — not a parallel product, not a new desk/vault/editor stack, and not a second CapCut business. Long-video-to-shorts is [`shorts/`](../shorts/) on sibling branch `helix/autoclip-shorts` (AutoClip absorbed, no-key path). See the repo-root README.
+> **HelixBuilds editing (code host only):** vendored on `helixmaximusai/OpenCut` branch `helix/working-and-tested` from [OpenCut-app/opencut-classic](https://github.com/OpenCut-app/opencut-classic). OpenCut is HelixBuilds’ editing tool (faceless YouTube pipeline), absorbed here — not a parallel product, not a new desk/vault/editor stack, and not a second CapCut business. See the repo-root README.
 
 This is the original OpenCut codebase. It's archived and no longer maintained.
 

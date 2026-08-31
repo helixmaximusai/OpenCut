@@ -57,7 +57,7 @@ Compile fixes on this host (missing runtime type guards and leftover positional-
 
 ### HelixBuilds shorts (AutoClip absorbed)
 
-Long-video-to-shorts lives on this same OpenCut host under [`shorts/`](shorts/) — not a new repo, not a CapCut/OpenCut parallel product, not AutoClip-the-desktop-app. AutoClip is vendored for provenance (`shorts/vendor/autoclip`, pin `17100c0`); the **running path is no-key**: ffmpeg + SRT heuristics, human publish gate, no auto-post, no IG/YT accounts.
+Long-video-to-shorts lives on this same OpenCut host — not a new repo, not a CapCut/OpenCut parallel product, not AutoClip-the-desktop-app. AutoClip is vendored at [`helixbuilds/autoclip/`](helixbuilds/autoclip/) (pin `17100c0`; does **not** clobber `classic/`). The **running path** is [`shorts/`](shorts/) (no-key ffmpeg + SRT heuristics, human publish gate, no auto-post, no IG/YT accounts).
 
 Sibling branch `helix/autoclip-shorts` (this work). Do **not** merge HOLD PR #1 (`helix/working-and-tested`).
 
