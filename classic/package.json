@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "turbo run build --filter=@opencut/web",
     "build:tools": "turbo run build --filter=@opencut/tools",
     "build:wasm": "wasm-pack build rust/wasm --target bundler --out-dir pkg",
     "build:web": "turbo run build --filter=@opencut/web",
@@ -26,7 +27,7 @@
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
     "better-auth": "^1.4.15",
-    "next": "^16.1.3",
+    "next": "16.1.3",
     "opencut": ".",
     "opencut-wasm": "^0.2.10"
   },
@@ -46,5 +47,8 @@
   },
   "trustedDependencies": [
     "@tailwindcss/oxide"
-  ]
+  ],
+  "overrides": {
+    "next": "16.1.3"
+  }
 }
