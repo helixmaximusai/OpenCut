@@ -24,10 +24,38 @@ From this directory, with `ffmpeg` on PATH:
 cd shorts
 PYTHONPATH=. python3 -m helix_shorts test
 PYTHONPATH=. python3 -m helix_shorts selftest
+PYTHONPATH=. python3 -m helix_shorts conform-selftest
 ```
 
 `selftest` generates a silent 9:16 color clip, writes a synthetic SRT, cuts
-shorts, and asserts the publish gate. No API keys.
+shorts, asserts the publish gate, and runs the waveform-conform fixtures.
+`conform-selftest` is the dedicated offset-recovery check (silent mp4 + VO,
+plus an xcorr tone pair). Synthetic lavfi fixtures only — never Nick's real
+Video #1 / `DRAFT-VIDEO-01-*.mp4`. No API keys.
+
+## Waveform conform (offline, no remux)
+
+Picture-accept helper: given a **silent mp4** and a **VO** (`mp3`/`wav`),
+write a JSON offset map + a human report. Optional ffmpeg filtergraph is a
+**suggestion** for remux *after* a human accepts picture. This CLI does not
+remux production files.
+
+```sh
+cd shorts
+PYTHONPATH=. python3 -m helix_shorts conform --video /path/to/silent.mp4 --audio /path/to/vo.wav --out ./out
+```
+
+Outputs:
+
+- `out/helix-conform.json` — `global_offset_seconds` (VO delay vs picture;
+  negative = VO leads), optional per-window suggestions, `filtergraph_suggestion`
+- `out/helix-conform.txt` — the same map in prose, plus an example remux
+  command that is **not** executed
+
+`global_offset_seconds` is how long to delay the VO so it lines up with
+picture. On a silent picture the tool uses VO-onset (trim leading silence).
+If the mp4 happens to carry a reference tone, it falls back to waveform
+cross-correlation. `$0`. No Higgs / Eleven / DashScope / YouTube.
 
 Cut a real local file (still does not post):
 
