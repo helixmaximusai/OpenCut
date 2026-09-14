@@ -51,8 +51,24 @@ Classic source pin: [`classic/.helix-classic-sha`](classic/.helix-classic-sha) (
 - **Rewrite at repo root** (`apps/web`): `bun run build` exits 0, but the UI is still “hello world” / “Editor coming soon”. `bun run test` fails (`depsOptimizer is required in dev mode`). Desktop `cargo check` fails on the same Rust 1.83 / edition 2024 mismatch. Documented `proto` / `moon` are not installed here.
 - **Desktop / GPUI** (rewrite and classic): not a headless Linux GUI; not verified as an interactive app.
 - **Auth/DB/Redis/Freesound/Marble**: build uses placeholders. Live editor features that need those services are unverified. No fal.ai.
+- **AutoClip original LLM steps (vendor only)**: outline/score/title/cluster need DashScope/Qwen or another paid key. Not run. HelixBuilds shorts uses the no-key ffmpeg+SRT path instead. Do not buy a key.
 
 Compile fixes on this host (missing runtime type guards and leftover positional-arg calls after object-params refactors) live in `classic/apps/web/src`.
+
+### HelixBuilds shorts (AutoClip absorbed)
+
+Long-video-to-shorts lives on this same OpenCut host — not a new repo, not a CapCut/OpenCut parallel product, not AutoClip-the-desktop-app. AutoClip is vendored at [`helixbuilds/autoclip/`](helixbuilds/autoclip/) (pin `17100c0`; does **not** clobber `classic/`). The **running path** is [`shorts/`](shorts/) (no-key ffmpeg + SRT heuristics, human publish gate, no auto-post, no IG/YT accounts).
+
+Sibling branch `helix/autoclip-shorts` (this work). Do **not** merge HOLD PR #1 (`helix/working-and-tested`).
+
+Verified command (exit 0, no LLM key):
+
+```sh
+cd shorts
+PYTHONPATH=. python3 -m helix_shorts test
+```
+
+`python3 -m helix_shorts selftest` also generates a silent 9:16 clip, cuts shorts, and asserts `publish.status = held_for_human`. DashScope/Qwen is **not** used. Original AutoClip LLM steps are not executed. A human still has to publish if anything goes public. Details: [`shorts/README.md`](shorts/README.md).
 
 [![Discord](https://img.shields.io/discord/1386309140057690133?label=Discord&logo=discord&logoColor=fff&color=5865F2&style=flat)](https://discord.gg/zmR9N35cjK)
 [![X](https://img.shields.io/badge/follow-%40opencutapp-000?logo=x&logoColor=fff&style=flat)](https://x.com/opencutapp)

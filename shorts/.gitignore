@@ -1,0 +1,4 @@
+# HelixBuilds shorts (local)
+shorts/**/__pycache__/
+shorts/.selftest-out/
+*.pyc

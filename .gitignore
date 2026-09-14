@@ -5,6 +5,12 @@ target/
 .env.*
 !.env.example
 /docs/
+__pycache__/
+*.pyc
 
 # moon runtime cache
 .moon/cache/
+
+# HelixBuilds shorts local output
+shorts/.selftest-out/
+shorts/out/
