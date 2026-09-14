@@ -1,14 +1,24 @@
-# HelixBuilds demo/preview — W&T checklist
+# Helix-meta demo/preview — OpenCut editing-host W&T
 
-**DRAFT / branch-only.** Do not merge. Do not mark ready. Do not publish. Do not deploy. Do not open Cloudflare billing, Workers, or Pages. **$0.**
+**DRAFT / branch-only.** Do not merge. Do not mark ready. Do not publish. Do not deploy. **$0.**
 
-SoT: helix-vault `_system/2026-09-14-mattyp-x-bookmarks-loop.md` ([PR #54](https://github.com/helixmaximusai/helix-vault/pull/54) MERGED). KEEP Helix-meta / promote-on-green. Cloudflare preview = RESEARCH until Nick writes a cap.
+Cite `_system/2026-09-14-mattyp-x-bookmarks-loop.md` as **Helix-meta KEEP / promote-on-green** only.
 
-**PASS ≠ GREEN ≠ live.** A check that cannot FAIL is not a check. Skills/routines only after W&T green **and** Nick.
+Lead-confirmed: helix-vault tip `e90cc4a7fae0cd77a6d14f638ccd8d7fa9116f22` / blob `f2012172d260b9c4d8d16b96317174e5bb9572df` ([PR #54](https://github.com/helixmaximusai/helix-vault/pull/54) MERGED).
 
-published: **NOTHING.** Law 5. **H-01** (HelixBuilds OpenCut host HOLD — absorb, do not fork; never merge/deploy/publish from this packet). Cap **$0**.
+**Not a Content-lane KEEP.** The leaf lists **Content / HelixBuilds** under **lanes with no KEEP**. No fan-out. This checklist is editing-host W&T for the Helix-meta demo/preview surface on `helixmaximusai/OpenCut` only.
+
+**PASS ≠ GREEN ≠ live.** **Skills RED** until W&T green **and** Nick. CF/preview **fail-closed** until Nick writes a cap.
+
+published: **NOTHING.** Law 5. **H-01** (editing-host HOLD — absorb, do not fork; never merge/deploy/publish from this packet). Cap **$0**. Draft PR only.
 
 ---
+
+## 0. Lane pin (do not fan-out)
+
+- [ ] Cited SoT as **Helix-meta KEEP / promote-on-green** only
+- [ ] Did **not** claim Content-lane KEEP, HelixBuilds-lane KEEP, or Narrative KEEP
+- [ ] Did **not** add a `ventures.yaml` row or clone cobe
 
 ## 1. Branch-only (never `main`)
 
@@ -42,9 +52,11 @@ On **PR #3** (`ac431055`), classic root `build` is aliased to `build:web`. On **
 - [ ] `bun run build` exit **0**
 - [ ] If typecheck fails with Next **16.2.4** vs apps/web **16.1.3**, stop quoting W&T tip as green for this check — cite PR #3 and re-run on `ac431055`. Do not fake green.
 
-## 3. Local preview only — Cloudflare forbidden
+## 3. CF / preview fail-closed until Nick written cap
 
-**Allowed** (localhost, no CF):
+**Fail-closed.** No wrangler. No OpenNext CF preview. No OpenNext CF deploy. No CF Pages/Workers/billing. No written Nick cap → do not run those paths.
+
+**Allowed** (localhost only):
 
 ```sh
 cd classic
@@ -53,16 +65,16 @@ bun run dev:web
 # or: cd apps/web && bun run dev
 ```
 
-Classic README: app at [http://localhost:3000](http://localhost:3000). After a green `bun run build`, local `cd apps/web && bun run start` is also allowed (still localhost).
+Classic README: [http://localhost:3000](http://localhost:3000). After a green `bun run build`, local `cd apps/web && bun run start` is also allowed (still localhost).
 
-**Forbidden until Nick writes a CF cap** (do not run, do not wire, do not open billing):
+**Fail-closed (do not run, do not wire, do not open billing):**
 
-| Command / surface | Why forbidden |
+| Command / surface | Why fail-closed |
 |---|---|
 | `bun run preview` / `preview:web` in classic | `opennextjs-cloudflare build && opennextjs-cloudflare preview` |
 | `bun run deploy` / `deploy:web` | `opennextjs-cloudflare deploy` |
 | `wrangler` (any) | Workers / Pages |
-| Cloudflare dashboard, billing, Workers, Pages, secrets | RESEARCH only. This packet must **not** enable CF. |
+| Cloudflare dashboard, billing, Workers, Pages, secrets | RESEARCH until Nick writes a cap. This packet must **not** enable CF. |
 
 - [ ] Previewed on **localhost** only (`dev` or local `start`)
 - [ ] Did **not** run wrangler / OpenNext CF preview / CF deploy
@@ -70,33 +82,36 @@ Classic README: app at [http://localhost:3000](http://localhost:3000). After a g
 
 ## 4. Screenshot validation before GREEN
 
-SoT KEEP: screenshot / video validation before treating a demo as reviewed. Same as fail-closed / W&T: a check that cannot FAIL is not a check.
+SoT Helix-meta KEEP: screenshot / video validation before treating a demo as reviewed. A check that cannot FAIL is not a check.
 
 - [ ] Human (or agent with a recorded screenshot) opened the local preview
 - [ ] Screenshot (or video) of the demo UI is attached to the draft PR / packet
 - [ ] **Do not call GREEN** from `bun run build` exit 0 alone. Build PASS ≠ preview validated.
 
-## 5. PASS ≠ GREEN ≠ live
+## 5. PASS ≠ GREEN ≠ live — Skills RED
 
 | Token | Means | Does **not** mean |
 |---|---|---|
 | **PASS** | A named command exited 0 (install, build, local dev came up) | The demo is promoted |
 | **GREEN** | W&T: build PASS **and** screenshot-validated local preview, on a branch | Live, merged, or a skill |
 | **live** | Public URL / `main` / published artifact | Anything this packet may do |
+| **Skills RED** | Candidate files only. Not installed. Not a Content-lane skill. | Promoted skill / routine |
 
-- [ ] Skills / routines **not** installed. Only after W&T green **and** Nick.
-- [ ] Auto-merge / auto-publish **not** enabled (SoT DROP).
+- [ ] **Skills RED** — not installed; only after W&T green **and** Nick
+- [ ] Auto-merge / auto-publish **not** enabled (SoT DROP)
 - [ ] published **NOTHING**
 - [ ] Law 5 held (MERGES / MONEY / CREDITS / PUBLISHING)
-- [ ] **H-01** held (this host is absorb-only; not a parallel product)
+- [ ] **H-01** held (editing host is absorb-only; not a parallel product)
 - [ ] **$0** — no CF spend, no fal.ai, no Higgs, no paid APIs
+- [ ] Draft PR only
 
 ## 6. Still fail (do not fake)
 
-Same as the editing-host candidate; this packet does not claim them green:
+This packet does not claim them green:
 
 - `cd classic && bun test` — published `opencut-wasm` (`wasm.__wbindgen_start is not a function`)
 - `bun run build:wasm` / rewrite `cargo check` — need Rust edition 2024
 - Live auth/DB/Redis/Freesound/Marble — placeholders only
 - Desktop / GPUI — not a headless Linux GUI
-- Cloudflare preview — **not run**. RESEARCH until Nick caps.
+- Cloudflare preview — **fail-closed**. Not run. RESEARCH until Nick caps.
+- Skills — **RED**. Not installed.
