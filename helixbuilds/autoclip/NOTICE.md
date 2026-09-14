@@ -2,7 +2,7 @@
 
 Path: `helixbuilds/autoclip/` on branch `helix/autoclip-shorts`.
 
-This directory is a **read-only provenance snapshot** of selected files from
+This directory is a **read-only provenance pin** of
 [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) at SHA
 `17100c05252b9a947ea1a857f8d0ea4f3af2317b` (MIT). Pin file: `.helix-autoclip-sha`.
 
@@ -12,12 +12,17 @@ product, not as a new GitHub repo, and not as a new venture.
 
 This folder does **not** replace `classic/` (OpenCut classic editor).
 
-## What was copied
+## What lives here
 
-- `backend/pipeline/` — original LLM-era steps (outline → timeline → score → title → cluster → cut)
-- `backend/utils/ffmpeg_utils.py`
-- `backend/utils/video_processor.py`
-- `backend/utils/subtitle_processor.py`
+- `.helix-autoclip-sha` — exact upstream commit
+- `LICENSE` — MIT from AutoClip
+- `NOTICE.md` — this file
+
+Upstream source is **not** copied into this tree. Incomplete pipeline files
+(missing `llm_client`, DashScope config, `mkdir` on import) fought the host
+rule "do not run this / do not buy a key." Read the original at:
+
+https://github.com/zhouxiaoka/autoclip/tree/17100c05252b9a947ea1a857f8d0ea4f3af2317b
 
 ## What was deliberately not copied
 
@@ -25,11 +30,12 @@ This folder does **not** replace `classic/` (OpenCut classic editor).
 - Bilibili / YouTube downloaders and uploaders (no auto-post, no IG/YT accounts)
 - DashScope / OpenAI / Gemini / SiliconFlow LLM clients
 - Docker / install-LLM scripts
+- `backend/` pipeline and utils (see upstream SHA)
 
 ## Runtime
 
-**Do not import this vendor tree.** It still references AutoClip's DashScope
-config and will not run here without paid keys. Stop rather than buy a key.
+**Do not import a vendor tree here.** There isn't one. Stop rather than buy
+a key.
 
 The working HelixBuilds path is `shorts/helix_shorts/` (ffmpeg + SRT
 heuristics, no LLM key, human publish gate).
